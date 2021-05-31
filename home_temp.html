@@ -72,6 +72,39 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: rgb(0, 247, 255);
 }
+
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+#register-nav {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+#register-nav:hover, #register-nav:focus, #register-nav:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
 table {
     size: 100%;
     font-size: 42px;
@@ -103,6 +136,14 @@ button[type=submit]{
   width: 100%;
 }
 
+li{
+    font-size: 32px;
+}
+
+address{
+    font-size: 32px;
+}
+
 </style>
 <body>
     <header style="font-size: 22px;">
@@ -113,22 +154,24 @@ button[type=submit]{
             <source src="https://assets.mixkit.co/videos/preview/mixkit-the-crowd-enjoying-a-rock-concert-17630-large.mp4" type="video/mp4">
         </video>
         <div class="top-left">
-            <img src="logo_final.png" alt="logo" width=25%>
+            <img src="img/logo_final.png" alt="logo" width=25%>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#" class="nav">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#about" class="nav">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#" class="nav">EVENTS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Events/Main/EVENTS PAGE.html" class="nav">EVENTS</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#sponsors" class="nav">SPONSORS</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#" class="nav">CONTACT US</a>
+            <a href="#footer" class="nav">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="registration/registration.html" class="nav" id="register-nav">REGISTER</a>
+
         </div>
     </div>
     <main style="background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
         <section id="about">
             <div class = "container">
-                <img src="cool-background (2).png" alt="bg" width="100%">
+                <img src="img/cool-background (2).png" alt="bg" width="100%">
                 <hr>
                 <div class = "top-left">
-                    <h1 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 72px; background-color: rgba(0, 0, 0, 0.623); ">ABOUT &nbsp;<img src="Free_Sample_By_Wix.jpg" alt="reminiscence" width = 15%></h1>
+                    <h1 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 72px; background-color: rgba(0, 0, 0, 0.623); ">ABOUT &nbsp;</h1>
                         <hr>
                         <div>
                         </div>
@@ -223,15 +266,22 @@ button[type=submit]{
                 <hr>
                 <table border="1">
                     <tr>
-                        <td><video src="https://assets.mixkit.co/videos/preview/mixkit-vocalist-of-a-pop-rock-band-singing-36740-large.mp4" width="100%" autoplay muted loop></video></td>
-                        <td><video src="https://assets.mixkit.co/videos/preview/mixkit-two-players-pressing-the-buttons-of-a-video-game-control-2976-large.mp4" width="100%" autoplay muted loop></video></td>
-                        <td><video src="img/pexels-cottonbro-6896251.mp4" width="100%" autoplay muted loop></video></td>
-                        <td rowspan="2">Events</td>
+                        <td>
+                            <a href="Events/Day_1/band.html"><video src="https://assets.mixkit.co/videos/preview/mixkit-vocalist-of-a-pop-rock-band-singing-36740-large.mp4" width="100%" autoplay muted loop></video></a>
+                        
+                        </td>
+                        <td>
+                            <a href="Events/Day_2/FIFA.html"><video src="https://assets.mixkit.co/videos/preview/mixkit-two-players-pressing-the-buttons-of-a-video-game-control-2976-large.mp4" width="100%" autoplay muted loop></video></a>
+                        </td>
+                        <td>
+                            <a href="Events/Day_1/adzap.html"><video src="img/pexels-cottonbro-6896251.mp4" width="100%" autoplay muted loop></video></a>
+                        </td>
+                        <td rowspan="2"><a href="Events/Main/EVENTS PAGE.html">More Events</a></td>
                     </tr>
                     <tr align="center">
-                        <td>BAND</td>
-                        <td>FIFA</td>
-                        <td>ADZAP</td>
+                        <td><a href="Events/Day_1/band.html">BAND</a></td>
+                        <td><a href="Events/Day_2/FIFA.html">FIFA</a></td>
+                        <td><a href="Events/Day_1/adzap.html">ADZAP</a></td>
                     </tr>
                 </table>
                 <br>
@@ -249,13 +299,25 @@ button[type=submit]{
                 </div>
             </section>
     </main>
-    <footer>
-        <div style="width: 50%;float: left;background-image: url(cool-background.svg)">
+    <footer id="footer">
+        <div style="width: 50%;float: left;">
             <ul type="none">
-                <li><img src="img/029-instagram.png" width="6%" alt="Instagram">Follow us on <a>Instagram</a></li>
-                <li><img src="img/036-facebook.png" width="6%" alt="Facebook">Follow us on Facebook</li>
-                <li><img src="img/001-youtube.png" width="6%" alt="YouTube">Watch us on YouTube</li>
-                <li><img src="img/008-twitter.png" width="6%" alt="Twitter">Follow us on Twitter</li>
+                <li><img src="img/029-instagram.png" width="6%" alt="Instagram" usemap="#IG">Follow us on <a href="https://www.instagram.com/team_reminiscence/">Instagram</a></li>
+                <map name="IG">
+                    <area target="_blank" alt="IG" title="Follow us on Instagram" href="https://www.instagram.com/team_reminiscence/" coords="1,0,512,510" shape="rect">
+                </map>
+                <li><img src="img/036-facebook.png" width="6%" alt="Facebook" usemap="#FB">Follow us on <a href="https://www.facebook.com/reminisce.event/">Facebook</a></li>
+                <map name="FB">
+                    <area target="_blank" alt="FB" title="Follow us on Facebook" href="https://www.facebook.com/reminisce.event/" coords="1,0,511,511" shape="rect">
+                </map>
+                <li><img src="img/001-youtube.png" width="6%" alt="YouTube" usemap="#YT">Watch us on <a href="https://www.youtube.com/user/reminisceevent">YouTube</a></li>
+                <map name="YT">
+                    <area target="_blank" alt="YT" title="Watch us on YouTube" href="https://www.youtube.com/user/reminisceevent" coords="0,0,512,511" shape="rect">
+                </map>
+                <li><img src="img/008-twitter.png" width="6%" alt="Twitter" usemap="#TW">Follow us on <a href="https://twitter.com/reminiscefest?lang=en">Twitter</a></li>
+                <map name="TW">
+                    <area target="_blank" alt="TW" title="Follow us on Twitter" href="https://twitter.com/reminiscefest?lang=en" coords="1,0,512,511" shape="rect">
+                </map>
             </ul>
         </div>
         <div style="width:50%;float:right;">
@@ -268,28 +330,46 @@ button[type=submit]{
             <br>
             <br>
             <br>
-            <br>
-            <br>
             &nbsp;&nbsp;
         </div>
-        <div style="background-image: url(cool-background\ \(1\).png); background-size: 100%;">
-            <h3>Feedback and Quick Contact</h3>
-            <form action="">
-                <label for="name">NAME:*&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" name="name" id="name" required>
-                <br>
-                <br>
-                <br>
-                <label for="no">CONTACT NUMBER:*</label>
-                <input type="text" name="no" id="no" required>
-                <br>
-                <br>
-                <br>
-                <label for="feed">FEEDBACK/PURPOSE:*</label>
-                <textarea name="feed" id="" cols="100" rows="5" placeholder="Enter your Feedback or purpose for Quick Contact here."></textarea>
-                <br>
-                <br>
-                 <button type="submit">SUBMIT</button>
+        <div style="background-image: url(img/cool-background\ \(1\).png); background-size: 100%; width: 100%; height: 100%;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr>
+            
+            <h3 style="width: 100%; text-align: center;">Feedback and Quick Contact</h3>
+            <hr>
+            <form>
+                <table style="width: 100%;font-size: 22px;">
+                    <tr>
+                        <td><label for="name">NAME:*&nbsp;&nbsp;&nbsp;</label></td>
+                        <td><input type="text" name="name" id="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="no">CONTACT NUMBER:*</label></td>
+                        <td><input type="text" name="no" id="no" required width="100%"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="feed">FEEDBACK/PURPOSE:*</label></td>
+                        <td><textarea name="feed" id="" cols="100" rows="5" placeholder="Enter your Feedback or purpose for Quick Contact here."></textarea></td>
+                    </tr>
+                </table>
+                <button type="submit" id="submit" name="submit" value="submit">SUBMIT</button>
             </form>
         </div>
     </footer>
