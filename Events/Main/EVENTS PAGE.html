@@ -20,7 +20,7 @@
     }
     
 
-.nav {
+    .nav {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -63,7 +63,7 @@
 
 a:link, a:visited {
   color: #000080;
-  font-size: 16px;
+  font-size: 20px;
   padding: 14px 25px;
   text-align: center;
   text-decoration: blink;
@@ -73,6 +73,39 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: rgb(0, 247, 255);
 }
+
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+#register-nav {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+#register-nav:hover, #register-nav:focus, #register-nav:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
 
 .centered {
   position: absolute;
@@ -91,15 +124,17 @@ a:hover, a:active {
 
             &nbsp;&nbsp;&nbsp;&nbsp;
 
-            <a href="#" class="nav">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../../home_temp.html" class="nav">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-            <a href="#about" class="nav">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../../home_temp.html#about" class="nav">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
             <a href="#" class="nav">EVENTS</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-            <a href="#sponsors" class="nav">SPONSORS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../../home_temp.html#sponsors" class="nav">SPONSORS</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-            <a href="#" class="nav">CONTACT US</a>
+            <a href="../../home_temp#footer" class="nav">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <a href="../../registration/registration.html" class="nav" id="register-nav" target="_blank">REGISTER</a>
         </div>
     </header>
     <br>
@@ -114,12 +149,12 @@ a:hover, a:active {
                 <td><a href="SCHEDULE.html">SCHEDULE</a></td>
             </tr>
             <tr>
-                <td style="text-align: center;"><img src="eventsimg.png" width="100px" height="60px" usemap=""></td>
-                <td>DAY-1 EVENTS</td>
+                <td style="text-align: center;"><img src="eventsimg.png" width="100px" height="60px" usemap="#day-1events"></td>
+                <td><a href="../Day_1/Day1events.html">DAY-1 EVENTS</a></td>
             </tr>
             <tr>
-                <td style="text-align: center;"><img src="eventsimg.png" width="100px" height="60px" usemap=""></td>
-                <td>DAY-2 EVENTS</td>
+                <td style="text-align: center;"><img src="eventsimg.png" width="100px" height="60px" usemap="#day-2events"></td>
+                <td><a href="../Day_2/Day2.html">DAY-2 EVENTS</a></td>
             </tr>
             <tr>
                 <td style="text-align: center;"><img src="eventsimg.png" width="100px" height="60px" usemap="#generalguidelines"></td>
@@ -136,6 +171,12 @@ a:hover, a:active {
     </main>
     <map name="schedule">
         <area shape="rect" coords="0,0,267,158" alt="Schedule" href="SCHEDULE.html">
+    </map>
+    <map name="day-1events">
+        <area shape="rect" coords="0,0,267,158" alt="Schedule" href="../Day_1/day-1events.html">
+    </map>
+    <map name="day-2events">
+        <area shape="rect" coords="0,0,267,158" alt="Schedule" href="../Day_2/Day2.html">
     </map>
     <map name="generalguidelines">
         <area shape="rect" coords="0,0,267,158" alt="General Guidelines" href="GENERAL GUIDELINES.html">
