@@ -13,12 +13,13 @@
   color: white;
 }
 
-/* Top left text */
+/* For text on top of video */
 .top-left {
   position: absolute;
   top: 8px;
 }
-
+/*For navigation bar's hover effect*/
+    
 .nav {
   display: inline-block;
   vertical-align: middle;
@@ -72,7 +73,8 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: rgb(0, 247, 255);
 }
-
+/*For pulse grow effect on Register button in the navigation bar*/
+    
 @-webkit-keyframes hvr-pulse-grow {
   to {
     -webkit-transform: scale(1.1);
@@ -147,14 +149,17 @@ address{
 </style>
 <body>
     <header style="font-size: 22px;">
+        <!-- Marquee in the header section displaying the last date of registration of the Event -->
         <marquee behavior="scroll" direction="right" height="35px">HURRY UP !!! Event Registration ends on January 24<sup>th</sup> 2022. Register Now !!</marquee>
     </header>
     <div class="container">
+        <!-- Background video playing on loop automatically without any controls -->
         <video width="100%" autoplay muted loop>
             <source src="https://assets.mixkit.co/videos/preview/mixkit-the-crowd-enjoying-a-rock-concert-17630-large.mp4" type="video/mp4">
         </video>
         <div class="top-left">
-            <img src="img/logo_final.png" alt="logo" width=25%>
+            <img src="img/logo_final.png" alt="logo" width=25%> <!-- Raster image of Event Logo -->
+            <!-- Content and links of Navigation bar -->
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#" class="nav">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#about" class="nav">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -165,12 +170,12 @@ address{
 
         </div>
     </div>
-    <main style="background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
+    <main style="background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);"> <!-- Linear gradient with the shades of purple and light blue is added in the background of main section -->
         <section id="about">
             <div class = "container">
-                <img src="img/cool-background (2).png" alt="bg" width="100%">
+                <img src="img/cool-background (2).png" alt="bg" width="100%"> <!-- Background image for About Section -->
                 <hr>
-                <div class = "top-left">
+                <div class = "top-left"> <!-- About section content -->
                     <h1 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 72px; background-color: rgba(0, 0, 0, 0.623); ">ABOUT &nbsp;</h1>
                         <hr>
                         <div>
@@ -184,12 +189,13 @@ address{
         
         <br>
         <br>
+        <!-- Chief Guest and Guest of Honour Section -->
         <section>
             <div>
                 <hr>
                 <h1 style="text-align:center; font-size:42px;">Chief Guest and Guest of Honour</h1>
                 <hr>
-                <img src="https://wallpaperaccess.com/full/1311181.jpg" width = "60%" align="left" alt="Virat Kohli">
+                <img src="https://wallpaperaccess.com/full/1311181.jpg" width = "60%" align="left" alt="Virat Kohli"> <!-- Inserted image of Chief Guest and Guest of Honour -->
             </div>
             <br>
             <br>
@@ -211,12 +217,13 @@ address{
             <br>
             <br>
         </section>
+        <!-- Time AND Venue Section -->
         <section>
             <div>
                 <hr>
                 <h1 style="text-align:center; font-size:42px;">Time AND Venue</h1>
                 <hr>
-                <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="55%" align="right" alt="Auditorium">
+                <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="55%" align="right" alt="Auditorium"> <!-- Inserted image of a sample auditorium -->
             </div>
             <br>
             <div>
@@ -224,52 +231,54 @@ address{
                 <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> February</h2>
                 <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 28px;">Venue : NCUI Auditorium & Convention Center</h2>
                 <h4 style="text-align: center;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    <!-- Inclusion of iframe of google maps of the Venue location-->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.598278981807!2d77.21061990000001!3d28.5517921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26b484013a5%3A0x5df1dc7d4218232d!2sNCUI%20Auditorium%20%26%20Convention%20Centre!5e0!3m2!1sen!2sin!4v1622115359537!5m2!1sen!2sin" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </h4>
             </div>
             <br>
             <br>
         </section>
+        <!-- Highlights of the Event Section -->
         <section>
             <div>
                 <hr>
                 <h1 style="text-align:center; font-size:42px;">Highlights of the Event</h1>
                 <hr>
-                <table>
+                <table> <!-- Usage of Table without border -->
                     <tr>
                         <td><h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Stand Up Comedy by <br>"Kenny Sebastian"</h2></td>
-                        <td><img src="https://i2.wp.com/deadant.co/wp-content/uploads/2020/05/KennyNew.png?fit=1489%2C841&ssl=1" width="100%" alt="Kenny Sebstain"></td>
+                        <td><img src="https://i2.wp.com/deadant.co/wp-content/uploads/2020/05/KennyNew.png?fit=1489%2C841&ssl=1" width="100%" alt="Kenny Sebstain"></td> <!-- Inserted image of Kenny Sebastian -->
                     </tr>
                     <tr>
-                        <td><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/03/18/662082-arijitsingh-031918.jpg" width="100%" alt="Arijitsingh"></td>
-                        <td><h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Live Concert by <br>"Arijit Singh"</h2></td>
+                        <td><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/03/18/662082-arijitsingh-031918.jpg" width="100%" alt="Arijitsingh"></td> <!-- Inserted image of Arijit Singh -->
+                        <td><h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Live Concert by <br>"Arijit Singh"</h2></td> 
                     </tr>
                     <tr>
                         <td><h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">More than Music Night by <br>"Marshmello"</h2></td>
-                        <td><img src="https://i.pinimg.com/originals/89/e4/a8/89e4a82ef51c8d499b3c4d4874b727ea.png" alt="Marshmello" width="100%"></td>
+                        <td><img src="https://i.pinimg.com/originals/89/e4/a8/89e4a82ef51c8d499b3c4d4874b727ea.png" alt="Marshmello" width="100%"></td> <!-- Inserted image of Marshmello -->
                     </tr>
                     <tr>
-                        <td><img src="https://yt3.ggpht.com/ytc/AAUvwniPiQ6rIL47wFuvLVfEZcHurDVYrKtLrTVXDLPH7g=s900-c-k-c0x00ffffff-no-rj" alt="sandeep_maheshwari" width="100%"></td>
+                        <td><img src="https://yt3.ggpht.com/ytc/AAUvwniPiQ6rIL47wFuvLVfEZcHurDVYrKtLrTVXDLPH7g=s900-c-k-c0x00ffffff-no-rj" alt="sandeep_maheshwari" width="100%"></td> <!-- Inserted image of Sandeep Maheshwari -->
                         <td><h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">The New Normal <br> Motivational Speech by <br>"Sandeep Maheshwari"</h2></td>
                     </tr>
                 </table>
             </section>
             </div>
+            <!-- Top Events to Participate Section -->
             <section>
                 <hr>
                 <h1 style="text-align:center; font-size:42px;">Top Events to Participate </h1>
                 <hr>
-                <table border="1">
-                    <tr>
+                <table border="1"> <!-- Table with border thickness = 1 -->
+                    <tr> <!-- All videos are nested inside anchor tag linking to corresponding html pages of the videos -->
                         <td>
-                            <a href="Events/Day_1/band.html"><video src="https://assets.mixkit.co/videos/preview/mixkit-vocalist-of-a-pop-rock-band-singing-36740-large.mp4" width="100%" autoplay muted loop></video></a>
-                        
+                            <a href="Events/Day_1/band.html"><video src="https://assets.mixkit.co/videos/preview/mixkit-vocalist-of-a-pop-rock-band-singing-36740-large.mp4" width="100%" autoplay muted loop></video></a> <!-- Inserted video of a Band Performing which plays automatically in loop without sound and controls -->
                         </td>
                         <td>
-                            <a href="Events/Day_2/FIFA.html"><video src="https://assets.mixkit.co/videos/preview/mixkit-two-players-pressing-the-buttons-of-a-video-game-control-2976-large.mp4" width="100%" autoplay muted loop></video></a>
+                            <a href="Events/Day_2/FIFA.html"><video src="https://assets.mixkit.co/videos/preview/mixkit-two-players-pressing-the-buttons-of-a-video-game-control-2976-large.mp4" width="100%" autoplay muted loop></video></a> <!-- Inserted video of a video game controller which plays automatically in loop without sound and controls -->
                         </td>
                         <td>
-                            <a href="Events/Day_1/adzap.html"><video src="img/pexels-cottonbro-6896251.mp4" width="100%" autoplay muted loop></video></a>
+                            <a href="Events/Day_1/adzap.html"><video src="img/pexels-cottonbro-6896251.mp4" width="100%" autoplay muted loop></video></a><!-- Inserted video of a group of people Performing Adzap which plays automatically in loop without sound and controls -->
                         </td>
                         <td rowspan="2"><a href="Events/Main/EVENTS PAGE.html">More Events</a></td>
                     </tr>
@@ -282,10 +291,12 @@ address{
                 <br>
             </section>
             <br>
+            <!-- Sponsors Section -->
             <section id="sponsors">
                 <hr>
                 <h1 style="text-align:center; font-size:42px;">Sponsors</h1>
                 <hr>
+                <!-- Logos of sponsors inserted in Raster Format -->
                 <div>
                     <img src="http://pngimg.com/uploads/amazon/amazon_PNG13.png" alt="Amazon" width="45%">
                     <img src="https://lifebeyondsportmedia.com/bestanden/Football-Sponsors/redbull.jpg" alt="Red Bull" width="45%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -294,9 +305,10 @@ address{
                 </div>
             </section>
     </main>
+    <!-- Footer of the page -->
     <footer id="footer">
         <div style="width: 50%;float: left;">
-            <ul type="none">
+            <ul type="none"> <!-- Unordered list of Social media Links with inserted image of corresponding social medias. All images are mapped to corresponding Social media links -->
                 <li><img src="img/029-instagram.png" width="6%" alt="Instagram" usemap="#IG">Follow us on <a href="https://www.instagram.com/team_reminiscence/" target="_blank">Instagram</a></li>
                 <map name="IG">
                     <area target="_blank" alt="IG" title="Follow us on Instagram" href="https://www.instagram.com/team_reminiscence/" coords="1,0,512,510" shape="rect">
@@ -315,6 +327,7 @@ address{
                 </map>
             </ul>
         </div>
+        <!-- Address of the organisers inserted -->
         <div style="width:50%;float:right;">
             <h3 style="color: black">Address</h3>
             <address style="color:black">
@@ -346,22 +359,22 @@ address{
             <br>
             <br>
             <hr>
-            
+            <!-- Feedback and Quick Contact form inserted -->
             <h3 style="width: 100%; text-align: center;">Feedback and Quick Contact</h3>
             <hr>
-            <form onsubmit="alert('The Feedback Form is submitted successfully.')">
+            <form onsubmit="alert('The Feedback Form is submitted successfully.')"> <!-- Alert message onsubmit is included -->
                 <table style="width: 100%;font-size: 22px;">
                     <tr>
                         <td><label for="name">NAME:*&nbsp;&nbsp;&nbsp;</label></td>
-                        <td><input type="text" name="name" id="name" required></td>
+                        <td><input type="text" name="name" id="name" required></td> <!-- Text input for name -->
                     </tr>
                     <tr>
                         <td><label for="no">CONTACT NUMBER:*</label></td>
-                        <td><input type="text" name="no" id="no" required width="100%"></td>
+                        <td><input type="text" name="no" id="no" required width="100%"></td> <!-- Text input for Contact Number -->
                     </tr>
                     <tr>
                         <td><label for="feed">FEEDBACK/PURPOSE:*</label></td>
-                        <td><textarea name="feed" id="" cols="100" rows="5" placeholder="Enter your Feedback or purpose for Quick Contact here."></textarea></td>
+                        <td><textarea name="feed" id="" cols="100" rows="5" placeholder="Enter your Feedback or purpose for Quick Contact here."></textarea></td> <!-- Text area input for Feedback or Contact Purpose -->
                     </tr>
                 </table>
                 <button type="submit" id="submit" name="submit" value="submit">SUBMIT</button>
